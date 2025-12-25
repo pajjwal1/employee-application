@@ -18,12 +18,24 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "report": "npm test -- --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/reportWebVitals.js",
+      "!src/**/__mocks__/**",
+      "!src/**/*.test.{js,jsx}",
+      "!src/**/*.css",
+      "!src/utils/**",
+      "!src/api/**"
     ]
   },
   "browserslist": {
